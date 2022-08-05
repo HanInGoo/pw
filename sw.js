@@ -17,6 +17,6 @@ self.addEventListener('push', function(e){
     };
     e.waitUntil(
 
-        self.registration.showNotification('Hello world!', options)
+        self.registration.showNotification('안녕 애들아 !!!', options)
     );
 });
