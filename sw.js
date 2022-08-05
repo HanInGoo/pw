@@ -3,20 +3,20 @@ self.addEventListener('push', function(e){
 
         body: 'This notification was generated from a push!',
         icon: 'images/example.png',
-        vibrate: [1100,50,100],
+        vibrate: [100,50,100],
         data: {
             dateOfArrival:Date.now(),
             primaryKey:'2'
         },
         actions:[
-            {action: 'explore', title= 'Explore this new world',
+            {action: 'explore', title : 'Explore this new world',
                 icon: 'images/checkmark.png'},
             {action: 'close', title: 'Close',
                 icon: 'images/xmark.png'},
         ]
     };
-    e.waitUntill(
+    e.waitUntil(
 
-        self.ServiceWorkerRegistration.showNotification('Hello world!', options)
+        self.registration.showNotification('Hello world!', options)
     );
 });
